@@ -1,2 +1,2 @@
 # Vitis-software-
-This tutorial help us to understand the utilization of the vitis software 
+this tutorial help us to better understand the utilization of vitis environment from beggining 

@@ -1,2 +1,6 @@
-# Vitis-software-
-this tutorial help us to better understand the utilization of vitis environment from beggining 
+#software part Enhancement of night time video using DCP based algorithm
+
+- Opencv
+- Python 3
+
+This code is already tested on jupyter notebook we can use it as reference ....

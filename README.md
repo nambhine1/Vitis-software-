@@ -1,4 +1,4 @@
-#software part Enhancement of night time video using DCP based algorithm
+#software part of Enhancement of night time video using DCP based algorithm
 
 - Opencv
 - Python 3

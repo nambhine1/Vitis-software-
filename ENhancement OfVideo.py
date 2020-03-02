@@ -74,7 +74,8 @@ def Recover(im,t,A,tx = 0.1):
 
 if __name__ == '__main__':
     import sys
-cap = cv2.VideoCapture('/home/semi/namby.mp4')
+    #namby is the name of the video.
+cap = cv2.VideoCapture('./namby.mp4')
 
 while(True):
     # Capture frame-by-frame

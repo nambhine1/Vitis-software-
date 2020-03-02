@@ -76,7 +76,7 @@ if __name__ == '__main__':
     import sys
     
 
-src = cv2.imread('/home/semi/Desktop/alika.png');
+src = cv2.imread('/path/to/the/input/image.png');
 
 I = src.astype('float64')/255;
  
@@ -90,7 +90,7 @@ cv2.imshow("dark",dark);
 cv2.imshow("Medium transmission t",t);
 cv2.imshow('Input Image I',src);
 cv2.imshow('Enhanced Image J ',J);
-cv2.imwrite("/home/semi/Desktop/j.png",J*255);
+cv2.imwrite("/path/to/the/output/image.png",J*255);
 cv2.waitKey();
     
 

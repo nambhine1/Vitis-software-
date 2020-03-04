@@ -2,7 +2,7 @@ import cv2;
 import math;
 import numpy as np;
 # im : input image
-# Nous devrons trouver la valeur de input image
+# Nous devrons trouver la valeur matricielle de darkchanne de l'input image
 def DarkChannel(im,sz):
     b,g,r = cv2.split(im)
     dc = cv2.min(cv2.min(r,g),b);

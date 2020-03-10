@@ -38,10 +38,10 @@ def TransmissionEstimate(im,A,sz):
 
 def Recover(im,te,A,tx = 0.1):
     res = np.empty(im.shape,im.dtype);
-    t = cv2.max(t,tx);
+    te = cv2.max(te,tx);
 
     for ind in range(0,3):
-        res[:,:,ind] = (im[:,:,ind]-A[0,ind])/t + A[0,ind]
+        res[:,:,ind] = (im[:,:,ind]-A[0,ind])/te + A[0,ind]
 
     return res
 

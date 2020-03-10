@@ -1,7 +1,7 @@
 import cv2;
 import math;
 import numpy as np;
-
+framepersecond = 24
 def DarkChannel(im,sz):
     b,g,r = cv2.split(im)
     dc = cv2.min(cv2.min(r,g),b);
@@ -48,12 +48,14 @@ def Recover(im,te,A,tx = 0.1):
 if __name__ == '__main__':
     import sys
     #namby is the name of the video.
-cap = cv2.VideoCapture('./namby.mp4')
+cap = cv2.VideoCapture('/home/semi/namby.mp4')
 
 while(True):
     # Capture frame-by-frame
     ret, src = cap.read()
-    I = src.astype('float64')/255;
+    b = cv2.resize(src,(300,300),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
+
+    I = b.astype('float64')/255;
  
     dark = DarkChannel(I,15);
     A = AtmLight(I,dark);
@@ -63,9 +65,9 @@ while(True):
     # Our operations on the frame come here
 
     # Display the resulting frame
-    cv2.imshow('INPUT',src);
+    cv2.imshow('INPUT',b);
     cv2.imshow('frame',J);
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(framepersecond) & 0xFF == ord('q'):
         break
 
 # When everything done, release the capture
